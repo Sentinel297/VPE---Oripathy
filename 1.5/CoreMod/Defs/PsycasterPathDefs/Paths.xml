@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <VanillaPsycastsExpanded.PsycasterPathDef>
+    <defName>VPE_Oripath-Y</defName>
+    <label>Oripathy</label>
+    <description>Embrace the power of the Originium to wield it in different powerful ways.</description>
+    <background>UI_Oripath-Y/Tree/Voidtreebase</background>
+    <altBackground>UI_Oripath-Y/Tree/Voidtreebase</altBackground>
+    <tab>Misc</tab>
+    <tooltip>Embrace the power of the Originium to wield it in different powerful ways.</tooltip>
+  </VanillaPsycastsExpanded.PsycasterPathDef>
+  
+</Defs>

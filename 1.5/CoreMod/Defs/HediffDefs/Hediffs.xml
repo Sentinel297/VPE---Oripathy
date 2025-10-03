@@ -1,0 +1,1329 @@
+<Defs>
+<ChemicalDef>
+    <defName>OriginiumCrystalSTNL</defName>
+    <label>Originium Crystal</label>
+    <canBinge>false</canBinge>
+	<addictionHediff>oripathySTNL</addictionHediff>
+    <generateAddictionGenes>false</generateAddictionGenes>
+  </ChemicalDef>
+  
+  <ChemicalDef>
+    <defName>OriginiumCrystalSafeSTNL</defName>
+    <label>Originium Crystal</label>
+    <canBinge>false</canBinge>
+	<addictionHediff>oripathySafeSTNL</addictionHediff>
+    <generateAddictionGenes>false</generateAddictionGenes>
+  </ChemicalDef>
+  
+<ThingDef ParentName="DrugPillBase">
+<defName>originite_crystalSTNL</defName>
+<label>Originite</label>
+<description>Piece of a crystal containing the oripathy disease...Best not to consume it. Unless you're feeding this to a prisoner.</description>
+<descriptionHyperlinks>
+<HediffDef>oripathySTNL</HediffDef>
+</descriptionHyperlinks>
+<graphicData>
+<texPath>Things/Item/originite_crystal</texPath>
+<graphicClass>Graphic_StackCount</graphicClass>
+</graphicData>
+<rotatable>false</rotatable>
+<statBases>
+<MarketValue>70</MarketValue>
+<Mass>0.01</Mass>
+</statBases>
+<recipeMaker>
+<recipeUsers>
+<li>CraftingSpot</li>
+<li>DrugLab</li>
+</recipeUsers>
+<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+<workSkill>Cooking</workSkill>
+<displayPriority>104</displayPriority>
+</recipeMaker>
+<costList>
+<InsectJelly>4</InsectJelly>
+</costList>
+<techLevel>Ultra</techLevel>
+<minRewardCount>10</minRewardCount>
+<ingestible>
+<drugCategory>Medical</drugCategory>
+<outcomeDoers>
+<li Class="IngestionOutcomeDoer_GiveHediff">
+<hediffDef>oripathySTNL</hediffDef>
+<severity>0.02</severity>
+</li>
+</outcomeDoers>
+</ingestible>
+<comps>
+<li Class="CompProperties_Drug">
+<chemical>OriginiumCrystalSTNL</chemical>
+<addictiveness>0</addictiveness>
+<needLevelOffset>0</needLevelOffset>
+<listOrder>1020</listOrder>
+</li>
+</comps>
+<tradeTags>
+<li>ExoticMisc</li>
+</tradeTags>
+<thingSetMakerTags>
+<li>RewardStandardCore</li>
+</thingSetMakerTags>
+<allowedArchonexusCount>50</allowedArchonexusCount>
+</ThingDef>
+----------------Overcharged Originite-----------------------
+<ThingDef ParentName="DrugPillBase">
+<defName>oc_originite_crystalSTNL</defName>
+<label>Overcharged Originite</label>
+<description>Piece of a crystal containing an hyper concentrated oripathy disease cluster that raises the infection by one level...Best not to consume it. Unless you're feeding this to a prisoner.</description>
+<descriptionHyperlinks>
+<HediffDef>oripathySTNL</HediffDef>
+</descriptionHyperlinks>
+<graphicData>
+<texPath>Things/Item/oc_originite_crystal</texPath>
+<graphicClass>Graphic_StackCount</graphicClass>
+</graphicData>
+<rotatable>false</rotatable>
+<statBases>
+<MarketValue>70</MarketValue>
+<Mass>0.01</Mass>
+</statBases>
+<recipeMaker>
+<recipeUsers>
+<li>CraftingSpot</li>
+<li>DrugLab</li>
+</recipeUsers>
+<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+<workSkill>Cooking</workSkill>
+<displayPriority>104</displayPriority>
+</recipeMaker>
+<costList>
+<InsectJelly>20</InsectJelly>
+</costList>
+<techLevel>Ultra</techLevel>
+<minRewardCount>10</minRewardCount>
+<ingestible>
+<drugCategory>Medical</drugCategory>
+<outcomeDoers>
+<li Class="IngestionOutcomeDoer_GiveHediff">
+<hediffDef>oripathySTNL</hediffDef>
+<severity>0.20</severity>
+</li>
+</outcomeDoers>
+</ingestible>
+<comps>
+<li Class="CompProperties_Drug">
+<chemical>OriginiumCrystalSTNL</chemical>
+<addictiveness>0</addictiveness>
+<needLevelOffset>0</needLevelOffset>
+<listOrder>1020</listOrder>
+</li>
+</comps>
+<tradeTags>
+<li>ExoticMisc</li>
+</tradeTags>
+<thingSetMakerTags>
+<li>RewardStandardCore</li>
+</thingSetMakerTags>
+<allowedArchonexusCount>50</allowedArchonexusCount>
+</ThingDef>
+------------Stabilized Crystal--------------
+<ThingDef ParentName="DrugPillBase">
+<defName>md_originite_crystalSTNL</defName>
+<label>Stabilized Originite</label>
+<description>Piece of a crystal containing a stabilized strain of the oripathy disease that slowly gets destroyed by the immune system. Raises the infection by one level.</description>
+<descriptionHyperlinks>
+<HediffDef>oripathySafeSTNL</HediffDef>
+</descriptionHyperlinks>
+<graphicData>
+<texPath>Things/Item/md_originite_crystal</texPath>
+<graphicClass>Graphic_StackCount</graphicClass>
+</graphicData>
+<rotatable>false</rotatable>
+<statBases>
+<MarketValue>70</MarketValue>
+<Mass>0.01</Mass>
+</statBases>
+<recipeMaker>
+<recipeUsers>
+<li>CraftingSpot</li>
+<li>DrugLab</li>
+</recipeUsers>
+<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+<workSkill>Cooking</workSkill>
+<displayPriority>104</displayPriority>
+</recipeMaker>
+<costList>
+<InsectJelly>20</InsectJelly>
+</costList>
+<techLevel>Ultra</techLevel>
+<minRewardCount>10</minRewardCount>
+<ingestible>
+<drugCategory>Medical</drugCategory>
+<outcomeDoers>
+<li Class="IngestionOutcomeDoer_GiveHediff">
+<hediffDef>oripathySafeSTNL</hediffDef>
+<severity>0.20</severity>
+</li>
+</outcomeDoers>
+</ingestible>
+<comps>
+<li Class="CompProperties_Drug">
+<chemical>OriginiumCrystalSafeSTNL</chemical>
+<addictiveness>0</addictiveness>
+<needLevelOffset>0</needLevelOffset>
+<listOrder>1020</listOrder>
+</li>
+</comps>
+<tradeTags>
+<li>ExoticMisc</li>
+</tradeTags>
+<thingSetMakerTags>
+<li>RewardStandardCore</li>
+</thingSetMakerTags>
+<allowedArchonexusCount>50</allowedArchonexusCount>
+</ThingDef>
+
+  <HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+      <defName>LimitBreakOripathySTNL</defName>
+      <label>Oripathy Limit-Break</label>
+      <description>This creature is being enhanced and healed by dark Originium Arts.</description>
+      <descriptionShort>This creature is being enhanced and healed by dark Originium Arts.</descriptionShort>
+      <isBad>false</isBad>
+       <disablesNeeds>
+       <li>Rest</li>
+	   <li>Food</li>
+	   <li>Joy</li>
+	   <li>Indoors</li>
+       <li>Outdoors</li>
+       <li>Comfort</li>
+       <li>Beauty</li>
+       <li>DrugDesire</li>
+       <li>RoomSize</li>
+       <li>Mood</li>
+       </disablesNeeds>
+	 <abilities>
+      <li>ResurrectSTNL</li>
+	  <li>OripathyCureSTNL</li>
+    </abilities>
+	  <stages>
+        <li>
+		<capMods>
+<li>
+<capacity>Moving</capacity>
+<offset>0.50</offset>
+</li>
+</capMods>
+		<regeneration>9999</regeneration>
+		<naturalHealingFactor>200</naturalHealingFactor>
+         <statFactors>
+		 <InjuryHealingFactor>500</InjuryHealingFactor>
+		 <IncomingDamageFactor>0.05</IncomingDamageFactor>
+		 </statFactors>
+        </li>
+      </stages>
+	  <comps>
+	  <li Class="HediffCompProperties_Effecter">
+<stateEffecter>PsychicRitual_Sustained</stateEffecter>
+</li>
+<li Class="VanillaPsycastsExpanded.HediffCompProperties_PlaySound">
+<sustainer>VPE_PsychicDrone_Sustainer</sustainer>
+</li>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+            <min>5800</min>
+            <max>5800</max>
+          </disappearsAfterTicks>
+		  <showRemainingTime>True</showRemainingTime>
+        </li>
+      </comps>
+    </HediffDef>
+	
+<HediffDef Name="DeathRefusal">
+<defName>OriginiumDeathRefusalSTNL</defName>
+<label>Oripathy Death-Refusal</label>
+<description>The final layer of protection shall the limit-break fail to help you, forcibly mutates the oripathy strain inside you to resurrect yourself shall you die. Can only be used once.</description>
+<hediffClass>Hediff_DeathRefusal</hediffClass>
+<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+<makesSickThought>false</makesSickThought>
+<scenarioCanAdd>false</scenarioCanAdd>
+<isBad>false</isBad>
+<showGizmosOnCorpse>true</showGizmosOnCorpse>
+<everCurableByItem>false</everCurableByItem>
+<comps>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+            <min>5800</min>
+            <max>5800</max>
+          </disappearsAfterTicks>
+		  <showRemainingTime>True</showRemainingTime>
+        </li>
+      </comps>
+</HediffDef>
+	
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>ResurrectSTNL</defName>
+<label>Oripathy-Induced Resurrection</label>
+<description>Infect a non-dessicated corpse with the oripathy strain currently developping inside you, causing them to resurrect. There may be side effects.</description>
+<iconPath>UI_Oripath-Y/Abilities/ResurrectionSTNL</iconPath>
+<cooldownTicksRange>1</cooldownTicksRange>
+<warmupMote>Mote_ResurrectAbility</warmupMote>
+<warmupStartSound>Resurrect_Cast</warmupStartSound>
+<displayOrder>600</displayOrder>
+<hostile>false</hostile>
+<sendMessageOnCooldownComplete>false</sendMessageOnCooldownComplete>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbilityTouch</verbClass>
+<drawAimPie>false</drawAimPie>
+<range>-1</range>
+<warmupTime>2</warmupTime>
+<soundCast>Resurrect_Resolve</soundCast>
+<targetParams>
+<canTargetPawns>false</canTargetPawns>
+<canTargetBuildings>false</canTargetBuildings>
+<canTargetCorpses>true</canTargetCorpses>
+<canTargetMechs>false</canTargetMechs>
+</targetParams>
+</verbProperties>
+<comps>
+<li Class="CompProperties_Resurrect"/>
+</comps>
+</AbilityDef>
+		
+	
+	<AbilityDef ParentName="AbilityTouchBase">
+<defName>OripathyCureSTNL</defName>
+<label>Cure Oripathy</label>
+<description>Inject the target with the same oripathy strain that is empowering you, the strain will target infected cells in the host's body and effectively neutralize the infection.</description>
+<iconPath>UI/Abilities/UnnaturalHealing</iconPath>
+<cooldownTicksRange>60000</cooldownTicksRange>
+<showPsycastEffects>false</showPsycastEffects>
+<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+<stunTargetWhileCasting>true</stunTargetWhileCasting>
+<moteOffsetAmountTowardsTarget>0.5</moteOffsetAmountTowardsTarget>
+<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+<disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+<warmupMote>Mote_HoraxSmallSpellWarmup</warmupMote>
+<warmupEffecter>HoraxianAbilityCasting</warmupEffecter>
+<warmupSound>AnomalyAbilityWarmup</warmupSound>
+<hostile>false</hostile>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbilityTouch</verbClass>
+<drawAimPie>false</drawAimPie>
+<range>-1</range>
+<warmupTime>4.5</warmupTime>
+<targetParams>
+<canTargetSelf>true</canTargetSelf>
+<canTargetMechs>true</canTargetMechs>
+<canTargetBuildings>false</canTargetBuildings>
+</targetParams>
+</verbProperties>
+<comps>
+<li Class="CompProperties_AbilityGiveHediffPsychic">
+<compClass>CompAbilityEffect_GiveHediffPsychic</compClass>
+<durationSecondsOverride>0</durationSecondsOverride>
+<replaceExisting>true</replaceExisting>
+<severity>0</severity>
+<hediffDef>oripathySTNL</hediffDef>
+</li>
+</comps>
+</AbilityDef>
+	
+	<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(0.75, 0.75, 0.75)</defaultLabelColor>
+      <defName>PhasingSTNL</defName>
+      <label>Phasing</label>
+      <description>This creature is using phase Arts to avoid danger, dodging will still cause the pawn to be stunned.</description>
+      <descriptionShort>This creature is using phase Arts to avoid danger, dodging will still cause the pawn to be stunned.</descriptionShort>
+      <isBad>false</isBad>
+	  <stages>
+        <li>
+         <statFactors>
+		 <IncomingDamageFactor>0</IncomingDamageFactor>
+		 </statFactors>
+        </li>
+      </stages>
+	  <comps>
+	  <li Class="HediffCompProperties_Effecter">
+<stateEffecter>BiomutationPulserWarmup</stateEffecter>
+</li>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+            <min>600</min>
+            <max>600</max>
+          </disappearsAfterTicks>
+		  <showRemainingTime>True</showRemainingTime>
+        </li>
+      </comps>
+    </HediffDef>
+	
+<HediffDef>
+<defName>OriginiumAssimilatedSTNL</defName>
+<label>Originium-Induced Death</label>
+<description>This creature's life has ended due to an overexposure to Originium.</description>
+<hediffClass>HediffWithComps</hediffClass>
+<defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+<lethalSeverity>0.5</lethalSeverity>
+<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+<makesSickThought>true</makesSickThought>
+<scenarioCanAdd>false</scenarioCanAdd>
+<isBad>false</isBad>
+<everCurableByItem>false</everCurableByItem>
+</HediffDef>
+
+<HediffDef>
+<defName>oripathySTNL</defName>
+<label>Oripathy</label>
+<description>Infected by nearly incurable oripathy which will lower the infected's stats but raise psychic sensitivity until death or inhibited through the use of an orig-inhibitor to reset the infection's progression. The cure might lie in its power.</description>
+<hediffClass>HediffWithComps</hediffClass>
+<descriptionHyperlinks>
+<ThingDef>OripathyInhibitorSTNL</ThingDef>
+<ThingDef>OripathyFailedInhibitorSTNL</ThingDef>
+</descriptionHyperlinks>
+<defaultLabelColor>(1,0.3, 0.3)</defaultLabelColor>
+<initialSeverity>0.01</initialSeverity> 
+<lethalSeverity>1</lethalSeverity>
+<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+<makesSickThought>true</makesSickThought>
+<scenarioCanAdd>true</scenarioCanAdd>
+<isBad>true</isBad>
+<everCurableByItem>false</everCurableByItem>
+<taleOnVisible>ToxicityRevealed</taleOnVisible>
+<comps>
+<li Class="HediffCompProperties_Immunizable">
+<compClass>HediffComp_ImmunizableToxic</compClass>
+<severityPerDayNotImmune>0.0111111111111111</severityPerDayNotImmune>
+</li>
+<li Class="HediffCompProperties_SurgeryInspectable">
+<surgicalDetectionDesc>{PAWN_nameDef} is showing early signs of oripathy.</surgicalDetectionDesc>
+</li>
+</comps>
+<stages>
+<li>
+<label>initial</label>
+</li>
+<li>
+<label>Negligible</label>
+<minSeverity>0.04</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.10</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.05</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Developing</label>
+<minSeverity>0.2</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.25</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.10</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Worrying</label>
+<minSeverity>0.40</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.50</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.20</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.20</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Alarming</label>
+<minSeverity>0.60</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.75</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.35</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.35</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Overtaking</label>
+<minSeverity>0.80</minSeverity>
+<statOffsets>
+<PsychicSensitivity>1</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.55</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.55</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.20</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Critical</label>
+<minSeverity>0.90</minSeverity>
+<statOffsets>
+<PsychicSensitivity>2</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.55</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.70</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.50</offset>
+</li>
+</capMods>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>Pawn/Humanlike/Body/Oripathy/Oripathy</li>
+		</texPaths>
+        <overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.05)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.05)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+</HediffDef>
+
+<HediffDef>
+<defName>oripathySafeSTNL</defName>
+<label>Curable Oripathy</label>
+<description>Infected by oripathy which will lower the infected's stats but raise psychic sensitivity until the immune system fights it off or death due to overdose, the drawbacks are weaker but it is still lethal at critically high doses.</description>
+<hediffClass>HediffWithComps</hediffClass>
+<defaultLabelColor>(0.3,0.3, 1)</defaultLabelColor>
+<initialSeverity>0.49</initialSeverity> 
+<lethalSeverity>1</lethalSeverity>
+<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+<makesSickThought>true</makesSickThought>
+<scenarioCanAdd>true</scenarioCanAdd>
+<isBad>false</isBad>
+<everCurableByItem>false</everCurableByItem>
+<taleOnVisible>ToxicityRevealed</taleOnVisible>
+<comps>
+<li Class="HediffCompProperties_Immunizable">
+<compClass>HediffComp_ImmunizableToxic</compClass>
+<severityPerDayNotImmune>-0.0111111111111111</severityPerDayNotImmune>
+</li>
+<li Class="HediffCompProperties_SurgeryInspectable">
+<surgicalDetectionDesc>{PAWN_nameDef} is showing early signs of oripathy.</surgicalDetectionDesc>
+</li>
+</comps>
+<stages>
+<li>
+<label>initial</label>
+<becomeVisible>false</becomeVisible>
+</li>
+<li>
+<label>Negligible</label>
+<minSeverity>0.04</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.10</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.01</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Developing</label>
+<minSeverity>0.2</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.25</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.02</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Worrying</label>
+<minSeverity>0.40</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.50</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.03</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.20</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Alarming</label>
+<minSeverity>0.60</minSeverity>
+<statOffsets>
+<PsychicSensitivity>0.75</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.07</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.35</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Overtaking</label>
+<minSeverity>0.80</minSeverity>
+<statOffsets>
+<PsychicSensitivity>1</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.15</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.55</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.20</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Critical</label>
+<minSeverity>0.90</minSeverity>
+<statOffsets>
+<PsychicSensitivity>2</PsychicSensitivity>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.15</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.70</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.50</offset>
+</li>
+</capMods>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>Pawn/Humanlike/Body/Oripathy/OripathyCurable</li>
+		</texPaths>
+        <overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.05)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.05)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+</HediffDef>
+<HediffDef>
+<defName>oripathypoisonSTNL</defName>
+<label>Hyper-lethal Oripathy Infection</label>
+<description>Infected by a modified strain of the oripathy virus, specifically engineered to drastically raise the lethality of the infection.</description>
+<hediffClass>HediffWithComps</hediffClass>
+<defaultLabelColor>(0.5,1.0, 0.5)</defaultLabelColor>
+<lethalSeverity>1</lethalSeverity>
+<canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+<makesSickThought>true</makesSickThought>
+<scenarioCanAdd>true</scenarioCanAdd>
+<isBad>false</isBad>
+<everCurableByItem>false</everCurableByItem>
+<taleOnVisible>ToxicityRevealed</taleOnVisible>
+<comps>
+<li Class="HediffCompProperties_Immunizable">
+<compClass>HediffComp_ImmunizableToxic</compClass>
+<severityPerDayNotImmune>6</severityPerDayNotImmune>
+</li>
+<li Class="HediffCompProperties_SurgeryInspectable">
+<surgicalDetectionDesc>{PAWN_nameDef} is showing early signs of oripathy.</surgicalDetectionDesc>
+</li>
+</comps>
+<stages>
+<li>
+<label>initial</label>
+<becomeVisible>false</becomeVisible>
+</li>
+<li>
+<label>Negligible</label>
+<minSeverity>0.04</minSeverity>
+<statOffsets>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Developing</label>
+<minSeverity>0.2</minSeverity>
+<statOffsets>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.15</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Worrying</label>
+<minSeverity>0.40</minSeverity>
+<statOffsets>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.20</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.20</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Alarming</label>
+<minSeverity>0.60</minSeverity>
+<statOffsets>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.35</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.35</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.10</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Overtaking</label>
+<minSeverity>0.80</minSeverity>
+<statOffsets>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.55</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.55</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.20</offset>
+</li>
+</capMods>
+</li>
+<li>
+<label>Dying</label>
+<minSeverity>0.90</minSeverity>
+<statOffsets>
+</statOffsets>
+<capMods>
+<li>
+<capacity>Consciousness</capacity>
+<offset>-0.60</offset>
+</li>
+<li>
+<capacity>Breathing</capacity>
+<offset>-0.70</offset>
+</li>
+<li>
+<capacity>Sight</capacity>
+<offset>-0.50</offset>
+</li>
+</capMods>
+</li>
+</stages>
+<renderNodeProperties>
+      <li>
+        <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+        <texPaths>
+		<li>Pawn/Humanlike/Body/Oripathy/OripathyLethal</li>
+		</texPaths>
+        <overrideMeshSize>(1.5, 1.5)</overrideMeshSize>
+        <parentTagDef>Body</parentTagDef>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+          <defaultData>
+            <layer>90</layer>
+          </defaultData>
+          <dataNorth>
+            <offset>(0, 0, 0)</offset>
+            <layer>90</layer>
+          </dataNorth>
+          <dataSouth>
+           <offset>(0, 0, 0)</offset>
+          </dataSouth>
+          <dataEast>
+             <offset>(0, 0,0.05)</offset>
+          </dataEast>
+          <dataWest>
+            <offset>(0, 0,0.05)</offset>
+          </dataWest>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+</HediffDef>
+
+ <HediffDef>
+      <defName>OriginiumArmorFormSTNL</defName>
+      <label>Originium Form</label>
+      <description>This person is covered in Originium acting as an indestructible armor at the cost of movement speed.</description>
+      <descriptionShort>This person is covered in Originium acting as an indestructible armor at the cost of movement speed.</descriptionShort>
+      <defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+      <scenarioCanAdd>true</scenarioCanAdd>
+      <initialSeverity>1</initialSeverity> 
+      <minSeverity>0</minSeverity>
+      <maxSeverity>1</maxSeverity>
+      <isBad>false</isBad>
+      <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+      <stages>
+	         <li>
+		    <minSeverity>1</minSeverity>
+			<painFactor>0.70</painFactor>
+            <statOffsets>
+               <MoveSpeed>-1</MoveSpeed>
+            </statOffsets>
+            <statFactors>
+               <IncomingDamageFactor>0.50</IncomingDamageFactor>
+            </statFactors>
+         </li>
+      </stages>
+      <renderNodeProperties>
+         <li>
+            <debugLabel>Originium Helmet</debugLabel>
+			<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/ArmorFormHelmet/ArmorHelmet</li>
+            </texPaths>
+            <baseLayer>95</baseLayer>
+            <texSeed>26</texSeed>
+         </li>
+         <li>
+            <debugLabel>Originium Plates</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/ArmorFormBody/ArmorBody</li>
+            </texPaths>
+            <baseLayer>94</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+      </renderNodeProperties>
+      <hediffClass>HediffWithComps</hediffClass>
+	  <comps>
+<li Class="HediffCompProperties_Immunizable">
+<compClass>HediffComp_ImmunizableToxic</compClass>
+<severityPerDayNotImmune>0</severityPerDayNotImmune>
+</li>
+</comps>
+	   <abilities>
+      <li>ToggleArmorSTNL</li>
+	  <li>ToggleArmbladeSTNL</li>
+    </abilities>
+   </HediffDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>ToggleArmorSTNL</defName>
+<label>Toggle armor</label>
+<description>Cancel the armor form.</description>
+<iconPath>UI_Oripath-Y/Abilities/Armortoggle</iconPath>
+ <jobDef>CastAbilityOnThing</jobDef>
+	<cooldownTicksRange>1</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.1</warmupTime>
+      <drawAimPie>False</drawAimPie>
+	  <range>-1</range>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+<comps>
+<li Class="CompProperties_AbilityGiveHediffPsychic">
+<compClass>CompAbilityEffect_GiveHediffPsychic</compClass>
+<durationSecondsOverride>0</durationSecondsOverride>
+<replaceExisting>true</replaceExisting>
+<severity>0</severity>
+<hediffDef>OriginiumArmorFormSTNL</hediffDef>
+</li>
+</comps>
+</AbilityDef>
+
+<HediffDef>
+      <defName>OriginiumBladeFormSTNL</defName>
+      <label>Originium Blade-form</label>
+      <description>This person's right arm is a sharp originium sword.</description>
+      <descriptionShort>This person's right arm is a sharp originium sword.</descriptionShort>
+      <defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+      <scenarioCanAdd>true</scenarioCanAdd>
+      <initialSeverity>1</initialSeverity> 
+      <isBad>false</isBad>
+      <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+      <renderNodeProperties>
+         <li>
+            <debugLabel>Originium Sword</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/ArmorFormBlade/BladeForm</li>
+            </texPaths>
+            <baseLayer>104</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+      </renderNodeProperties>
+      <hediffClass>HediffWithComps</hediffClass>
+	  <comps>
+<li Class="HediffCompProperties_VerbGiver">
+            <tools>
+               <li>
+                  <label>Originum Sword</label>
+                  <capacities>
+                     <li>Cut</li>
+					 <li>Stab</li>
+                  </capacities>
+                  <power>20</power>
+                  <cooldownTime>1</cooldownTime>
+                  <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+               </li>
+            </tools>
+         </li>
+</comps>
+	   <abilities>
+	  <li>ToggleArmbladeoffSTNL</li>
+	  	  <li>LongjumpSTNL</li>
+    </abilities>
+   </HediffDef>
+
+<AbilityDef Name="LongJump">
+<defName>LongjumpSTNL</defName>
+<label>Dash</label>
+<description>Jump to a distant location.</description>
+<iconPath>UI/Abilities/Longjump</iconPath>
+<cooldownTicksRange>6000</cooldownTicksRange>
+<hostile>false</hostile>
+<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+<verbClass>Verb_CastAbilityJump</verbClass>
+<label>jump</label>
+<violent>false</violent>
+<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+<warmupTime>0.5</warmupTime>
+<range>19.9</range>
+<requireLineOfSight>false</requireLineOfSight>
+<soundCast>Longjump_Jump</soundCast>
+<soundLanding>Longjump_Land</soundLanding>
+<targetParams>
+<canTargetLocations>true</canTargetLocations>
+<canTargetPawns>false</canTargetPawns>
+<canTargetBuildings>false</canTargetBuildings>
+</targetParams>
+</verbProperties>
+<jobDef>CastJump</jobDef>
+<comps>
+</comps>
+</AbilityDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>ToggleArmbladeSTNL</defName>
+<label>Blade-form</label>
+<description>Morph your arm into a sharp blade.</description>
+<iconPath>UI_Oripath-Y/Abilities/Swordon</iconPath>
+ <jobDef>CastAbilityOnThing</jobDef>
+	<cooldownTicksRange>1</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.1</warmupTime>
+      <drawAimPie>False</drawAimPie>
+	  <range>-1</range>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+<comps>
+<li Class="CompProperties_AbilityGiveHediffPsychic">
+<compClass>CompAbilityEffect_GiveHediffPsychic</compClass>
+<durationSecondsOverride>0</durationSecondsOverride>
+<replaceExisting>true</replaceExisting>
+<severity>1</severity>
+<hediffDef>OriginiumBladeFormSTNL</hediffDef>
+</li>
+</comps>
+</AbilityDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>ToggleArmbladeoffSTNL</defName>
+<label>Reverse Blade-form</label>
+<description>Morph the Blade-form back into your arm.</description>
+<iconPath>UI_Oripath-Y/Abilities/Swordoff</iconPath>
+ <jobDef>CastAbilityOnThing</jobDef>
+	<cooldownTicksRange>1</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.1</warmupTime>
+	  <range>-1</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+<comps>
+<li Class="CompProperties_AbilityGiveHediffPsychic">
+<compClass>CompAbilityEffect_GiveHediffPsychic</compClass>
+<durationSecondsOverride>0</durationSecondsOverride>
+<replaceExisting>true</replaceExisting>
+<severity>0</severity>
+<hediffDef>OriginiumBladeFormSTNL</hediffDef>
+</li>
+</comps>
+</AbilityDef>
+
+<HediffDef>
+      <defName>OriginiumEnhancementFormSTNL</defName>
+      <label>Originium Psychic Enhancement</label>
+      <description>This person is manifesting originium catalysts, doubling their psychic sensitivity and halving their heat gain. They also regenerate more psyfocus when meditating.</description>
+      <descriptionShort>This person is manifesting originium catalysts, doubling their psychic sensitivity and halving their heat gain. They also regenerate more psyfocus when meditating.</descriptionShort>
+      <defaultLabelColor>(1, 0, 0)</defaultLabelColor>
+      <scenarioCanAdd>true</scenarioCanAdd>
+      <initialSeverity>1</initialSeverity> 
+      <minSeverity>0</minSeverity>
+      <maxSeverity>1</maxSeverity>
+      <isBad>false</isBad>
+      <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+      <stages>
+	         <li>
+		    <minSeverity>0</minSeverity>
+            <statFactors>
+<PsychicSensitivity>2</PsychicSensitivity>
+<PsychicEntropyGain>0.5</PsychicEntropyGain>
+<MeditationFocusGain>10</MeditationFocusGain>
+</statFactors>
+         </li>
+      </stages>
+      <renderNodeProperties>
+         <li>
+            <debugLabel>Originium Catalysts</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/Enhancement/Enhancement</li>
+            </texPaths>
+            <baseLayer>1</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+		 <li>
+            <debugLabel>Originium Effect</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/PsychicForm/Enhancement</li>
+            </texPaths>
+            <baseLayer>0</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+		 <li>
+            <debugLabel>Originium Effect North</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/PsychicFormNorth/Enhancement</li>
+            </texPaths>
+            <baseLayer>99</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+		 <li>
+            <debugLabel>Originium Catalysts Sides</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/EnhancementSide/EnhancementSide</li>
+            </texPaths>
+            <baseLayer>999</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+		 <li>
+            <debugLabel>Originium Catalysts North</debugLabel>
+            <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+            <texPaths>
+               <li>Pawn/EnhancementNorth/EnhancementNorth</li>
+            </texPaths>
+            <baseLayer>98</baseLayer>
+            <texSeed>1</texSeed>
+         </li>
+      </renderNodeProperties>
+      <hediffClass>HediffWithComps</hediffClass>
+	  <comps>
+<li Class="HediffCompProperties_Immunizable">
+<compClass>HediffComp_ImmunizableToxic</compClass>
+<severityPerDayNotImmune>0</severityPerDayNotImmune>
+</li>
+</comps>
+ <abilities>
+      <li>TogglePsychicEnhanceSTNL</li>
+	  <li>RapidHealingSTNL</li>
+    </abilities>
+   </HediffDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>TogglePsychicEnhanceSTNL</defName>
+<label>Toggle Psy-form</label>
+<description>Dispel the catalysts.</description>
+<iconPath>UI_Oripath-Y/Abilities/TogglePsy</iconPath>
+ <jobDef>CastAbilityOnThing</jobDef>
+	<cooldownTicksRange>12000</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.1</warmupTime>
+	  <range>-1</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+<comps>
+<li Class="CompProperties_AbilityGiveHediffPsychic">
+<compClass>CompAbilityEffect_GiveHediffPsychic</compClass>
+<durationSecondsOverride>0</durationSecondsOverride>
+<replaceExisting>true</replaceExisting>
+<severity>0</severity>
+<hediffDef>OriginiumEnhancementFormSTNL</hediffDef>
+</li>
+</comps>
+</AbilityDef>
+
+<AbilityDef ParentName="AbilityTouchBase">
+<defName>RapidHealingSTNL</defName>
+<label>Grant Regenerative Oripathy</label>
+<description>Grant near-instant healing capabilities to the target.</description>
+<iconPath>UI_Oripath-Y/Abilities/Heal</iconPath>
+ <jobDef>CastAbilityOnThing</jobDef>
+	<cooldownTicksRange>60000</cooldownTicksRange>
+    <targetRequired>True</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+<verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>9.9</range>
+      <drawAimPie>True</drawAimPie>
+      <requireLineOfSight>True</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetMechs>true</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+<comps>
+<li Class="CompProperties_AbilityGiveHediff">
+<compClass>CompAbilityEffect_GiveHediff</compClass>
+<replaceExisting>true</replaceExisting>
+<hediffDef>HealingOripathySTNL</hediffDef>
+<durationSecondsOverride>4</durationSecondsOverride>
+</li>
+</comps>
+</AbilityDef>
+
+<HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+      <defName>HealingOripathySTNL</defName>
+      <label>Regenerative oripathy</label>
+      <description>This creature is being healed by Originium Arts.</description>
+      <descriptionShort>This creature is being healed by Originium Arts.</descriptionShort>
+      <isBad>false</isBad>
+	  <stages>
+        <li>
+		<regeneration>9999999</regeneration>
+		<naturalHealingFactor>200</naturalHealingFactor>
+        </li>
+      </stages>
+	  <comps>
+	  <li Class="HediffCompProperties_Effecter">
+<stateEffecter>BiomutationPulserWarmup</stateEffecter>
+</li>
+<li Class="HediffCompProperties_Disappears">
+<disappearsAfterTicks>12000</disappearsAfterTicks>
+<showRemainingTime>True</showRemainingTime>
+        </li>
+      </comps>
+    </HediffDef>
+
+</Defs>

@@ -1,0 +1,35 @@
+
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+
+               <li Class="StockGenerator_SingleDef">
+        <thingDef>OripathyInhibitorSTNL</thingDef>
+        <countRange>1</countRange>
+      </li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+
+               <li Class="StockGenerator_SingleDef">
+        <thingDef>OripathyInhibitorSTNL</thingDef>
+        <countRange>1</countRange>
+      </li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+		<value>
+
+               <li Class="StockGenerator_SingleDef">
+        <thingDef>OripathyInhibitorSTNL</thingDef>
+        <countRange>1</countRange>
+      </li>
+		</value>
+	</Operation>
+	</Patch>

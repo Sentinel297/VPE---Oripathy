@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_Oripath-Y-Infect</defName>
+    <label>Originium Infection</label>
+    <description>Skip an originium crystal inside the target to infect them with Oripathy, boosting their psychic sensitivity stat at the cost of others and certain death. (This psycast infects the target with the first signs of oripathy.)</description>
+    <iconPath>UI_Oripath-Y/Abilities/Infection</iconPath>
+    <castTime>500</castTime>
+    <durationTime>12000</durationTime>
+    <targetMode>Pawn</targetMode>
+    <range>5.5</range>
+	<needsTicking>true</needsTicking>
+    <goodwillImpact>-100</goodwillImpact>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>PsychicRitual_Interrupted</castSound>
+    <fleckOnTarget>PsychicRitual_Complete</fleckOnTarget>
+	<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>false</canTargetMechs>
+		</targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.30</psyfocusCost>
+        <entropyGain>45</entropyGain>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>oripathySTNL</hediff>
+      </li>
+	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>HoraxianSpellDark_Warmup</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+  
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_OriginitemanifestSTNL</defName>
+<label>Summon Originite Crystal</label>
+<description>Psychically transform a pile of stone deep underground into an originite chunk before making it surface. (0.02% Infection/u)</description>
+<iconPath>Things/Item/originite_crystal/originite_crystal</iconPath>
+<abilityClass>VFECore.Abilities.Ability_Spawn</abilityClass>
+<castTime>60</castTime>
+<range>16</range>
+<targetMode>Location</targetMode>
+<castSound>VPE_Decoy_Cast</castSound>
+<durationTime>360</durationTime>
+<durationTimeStatFactors>
+<PsychicSensitivity>1</PsychicSensitivity>
+</durationTimeStatFactors>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_Oripath-Y</path>
+<level>2</level>
+<order>1</order>
+<psyfocusCost>0.6</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+<li>VPE_Oripath-Y-Infect</li>
+</prerequisites>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_Spawn">
+<thing>originite_crystalSTNL</thing>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>BiomutationPulserUsed</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_OCOriginitemanifestSTNL</defName>
+<label>Summon Overcharged Originite Crystal</label>
+<description>Psychically transform a pile of stone deep underground into an originite chunk before making it surface. (0.20% Infection/u)</description>
+<iconPath>Things/Item/oc_originite_crystal/originite_crystal</iconPath>
+<abilityClass>VFECore.Abilities.Ability_Spawn</abilityClass>
+<castTime>60</castTime>
+<range>16</range>
+<targetMode>Location</targetMode>
+<castSound>VPE_Decoy_Cast</castSound>
+<durationTime>360</durationTime>
+<durationTimeStatFactors>
+<PsychicSensitivity>1</PsychicSensitivity>
+</durationTimeStatFactors>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_Oripath-Y</path>
+<level>2</level>
+<order>1</order>
+<psyfocusCost>0.6</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+<li>VPE_Oripath-Y-Infect</li>
+</prerequisites>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_Spawn">
+<thing>oc_originite_crystalSTNL</thing>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>BiomutationPulserUsed</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_PhasingSTNL</defName>
+    <label>Phase</label>
+    <description>Use your Arts to phase, allowing you to avoid any incoming damage for a 10 sec duration. Dodging will still require time to get back into fighting position, Causing a slight stun when hit.</description>
+    <iconPath>UI_Oripath-Y/Abilities/Phase</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>1</castTime>
+	<castSound>VPE_Darkness_Cast</castSound>
+	<needsTicking>true</needsTicking>
+	<chance>0</chance>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_Oripath-Y</path>
+				<level>3</level>
+				<order>1</order>
+				<psyfocusCost>0.3</psyfocusCost>
+				<entropyGain>35</entropyGain>
+<prerequisites>
+<li>VPE_OCOriginitemanifestSTNL</li>
+<li>VPE_OriginitemanifestSTNL</li>
+</prerequisites>
+			</li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>PhasingSTNL</hediff>
+      </li>
+	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>HoraxianSpellDark_Warmup</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>0.5</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_BrainmeltSTNL</defName>
+<label>Originium Mind-Control</label>
+<chance>0</chance>
+<description>Breaks the brain structure of the target and replaces it with an originium based crystal, effectively killing them and turning them into an originium zombie for your faction. Retains the capabilities of the host but infects them with the first few signs of curable oripathy.</description>
+<iconPath>UI_Oripath-Y/Abilities/MindBreak</iconPath>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+<targetingParameters>
+<canTargetSelf>True</canTargetSelf>
+<canTargetAnimals>True</canTargetAnimals>
+<canTargetMechs>True</canTargetMechs>
+<canTargetHumans>True</canTargetHumans>
+</targetingParameters>
+<range>5</range>
+<castTime>230</castTime>
+<goodwillImpact>0</goodwillImpact>
+<needsTicking>true</needsTicking>
+<castSound>PsychicShockLanceCast</castSound>
+<showUndrafted>true</showUndrafted>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_Oripath-Y</path>
+<level>4</level>
+<order>1</order>
+<psyfocusCost>0.6</psyfocusCost>
+<entropyGain>60</entropyGain>
+<prerequisites>
+<li>VPE_PhasingSTNL</li>
+</prerequisites>
+</li>
+ <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>0.5</scale>
+</li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>oripathySafeSTNL</hediff>
+      </li>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_JoinFaction"/>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_DarknessSTNL</defName>
+    <label>World Of Dark: Resurrecting-Oripathy</label>
+    <description>Unleash a huge cloud of Originium dust high in the sky, causing it to resurrect dead creatures back to life in a berserk state.</description>
+    <iconPath>UI_Oripath-Y/Abilities/OripathyRevive</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+    <targetMode>Self</targetMode>
+    <castSound>PsychicShockLanceCast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>5</level>
+        <order>3</order>
+        <psyfocusCost>0.3</psyfocusCost>
+        <entropyGain>0</entropyGain>
+        <prerequisites>
+          <li>VPE_BrainmeltSTNL</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>DeathPallSTNL</gameCondition>
+        <durationDays>1</durationDays>
+        <sendLetter>true</sendLetter>
+      </li>
+    </modExtensions>
+	 </VFECore.Abilities.AbilityDef>
+	  
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_UDarknessSTNL</defName>
+    <label>Dead World</label>
+    <description>Unleash a huge cloud of Originium dust high in the sky, shrouding the world in darkness. Causing allies and foes to not venture out of their settlements which will prevent raids and caravans from showing up for the duration of this ability. (1,5d)</description>
+    <iconPath>UI_Oripath-Y/Abilities/DeadWorld</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>600</castTime>
+    <targetMode>Self</targetMode>
+    <castSound>PsychicShockLanceCast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>5</level>
+        <order>2</order>
+        <psyfocusCost>0.3</psyfocusCost>
+        <entropyGain>0</entropyGain>
+        <prerequisites>
+          <li>VPE_BrainmeltSTNL</li>
+        </prerequisites>
+      </li>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_GameCondition">
+        <gameCondition>DarkWorldSTNL</gameCondition>
+        <durationDays>1.5</durationDays>
+        <sendLetter>true</sendLetter>
+      </li>
+    </modExtensions>
+	  </VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_Oripath-Y-InfectSafe</defName>
+    <label>Originium Infection (Curable)</label>
+	<chance>0</chance>
+    <description>Skip an originium crystal inside the target to infect them with Oripathy, boosting their psychic sensitivity stat at the cost of others and certain death if abused. While this type of infection is less severe and curable the lethality remains the same if it reaches critical levels. (49% Infection per cast, slowly goes down.)</description>
+    <iconPath>UI_Oripath-Y/Abilities/InfectionSafe</iconPath>
+    <castTime>120</castTime>
+    <durationTime>12000</durationTime>
+    <targetMode>Pawn</targetMode>
+	<needsTicking>true</needsTicking>
+    <range>14</range>
+    <goodwillImpact>-100</goodwillImpact>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>PsychicRitual_Interrupted</castSound>
+    <fleckOnTarget>PsychicRitual_Complete</fleckOnTarget>
+	<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>6</level>
+        <order>1</order>
+        <psyfocusCost>0.30</psyfocusCost>
+        <entropyGain>50</entropyGain>
+<prerequisites>
+<li>VPE_Oripath-Y-InfectDanger</li>
+</prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>oripathySafeSTNL</hediff>
+      </li>
+	  	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>HoraxianSpellLight_Warmup</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+	
+		<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_Oripath-Y-InfectDanger</defName>
+    <label>Originium Infection (Poisoned)</label>
+    <description>Skip an originium crystal inside the targets present in the AOE to infect them with Oripathy, rapidly killing the target. (50% per cast, rapidly ramps up.)</description>
+    <iconPath>UI_Oripath-Y/Abilities/InfectionDanger</iconPath>
+    <castTime>250</castTime>
+	<chance>0</chance>
+	<needsTicking>true</needsTicking>
+    <goodwillImpact>-100</goodwillImpact>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>PsychicRitual_Interrupted</castSound>
+    <fleckOnTarget>PsychicRitual_Complete</fleckOnTarget>
+	<range>13.5</range>
+    <radius>3.5</radius>
+    <targetMode>Location</targetMode>
+    <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>False</canTargetSelf>
+      <canTargetHumans>True</canTargetHumans>
+      <canTargetMechs>True</canTargetMechs>
+      <canTargetAnimals>True</canTargetAnimals>
+      <neverTargetIncapacitated>True</neverTargetIncapacitated>
+    </targetingParametersForAoE>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>6</level>
+        <order>2</order>
+        <psyfocusCost>0.49</psyfocusCost>
+        <entropyGain>70</entropyGain>
+<prerequisites>
+<li>VPE_UDarknessSTNL</li>
+<li>VPE_DarknessSTNL</li>
+</prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>oripathypoisonSTNL</hediff>
+      </li>
+	  	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+<defName>VPE_MDOriginitemanifestSTNL</defName>
+<label>Summon Stabilized Originite Crystal</label>
+<description>Psychically transform a pile of stone deep underground into an originite chunk before making it surface. This chunk is stabilized, meaning that the Oripathy from this fragment is curable and that the drawbacks are less severe. (0.20% Infection/u Slowly goes down.)</description>
+<iconPath>Things/Item/md_originite_crystal/originite_crystal</iconPath>
+<abilityClass>VFECore.Abilities.Ability_Spawn</abilityClass>
+<castTime>60</castTime>
+<range>16</range>
+<targetMode>Location</targetMode>
+<castSound>VPE_Decoy_Cast</castSound>
+<durationTime>360</durationTime>
+<durationTimeStatFactors>
+<PsychicSensitivity>1</PsychicSensitivity>
+</durationTimeStatFactors>
+<needsTicking>true</needsTicking>
+<chance>0</chance>
+<modExtensions>
+<li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+<path>VPE_Oripath-Y</path>
+<level>6</level>
+<order>3</order>
+<psyfocusCost>0.6</psyfocusCost>
+<entropyGain>50</entropyGain>
+<prerequisites>
+<li>VPE_Oripath-Y-InfectDanger</li>
+</prerequisites>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_Spawn">
+<thing>md_originite_crystalSTNL</thing>
+</li>
+<li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>BiomutationPulserUsed</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>1</scale>
+</li>
+</modExtensions>
+</VFECore.Abilities.AbilityDef>
+	
+	<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_OripathyLimitBreakSTNL</defName>
+    <label>Oripathy Limit-Break</label>
+    <description>Overcharge your body with a modified strain of the Oripathy virus, drastically changing your metabolism to be hyper-efficient and self regenerating for two hours.</description>
+    <iconPath>UI_Oripath-Y/Abilities/LimitBreak</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>1</castTime>
+	<castSound>VoidMonolith_ActivatedL2L3</castSound>
+	<needsTicking>true</needsTicking>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_Oripath-Y</path>
+				<level>7</level>
+				<order>2</order>
+				<psyfocusCost>0.69</psyfocusCost>
+				<entropyGain>200</entropyGain>
+				<prerequisites>
+<li>VPE_Oripath-Y-InfectSafe</li>
+<li>VPE_MDOriginitemanifestSTNL</li>
+</prerequisites>
+			</li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>LimitBreakOripathySTNL</hediff>
+      </li>
+	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+	  <li Class="VFECore.Abilities.AbilityExtension_ExtraHediffs">
+<onCaster>
+<li>OriginiumDeathRefusalSTNL</li>
+</onCaster>
+<durationTimeOverride>5800</durationTimeOverride>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>OriginiumArmorSTNL</defName>
+    <label>Originium Juggernaut</label>
+    <description>Form an armor of originium around yourself, allowing you to absorb half the damage at the cost of mobility.</description>
+    <iconPath>UI_Oripath-Y/Abilities/Armortoggle</iconPath>
+    <castTime>120</castTime>
+    <durationTime>12000</durationTime>
+    <targetMode>Self</targetMode>
+    <range>14</range>
+	<needsTicking>true</needsTicking>
+    <goodwillImpact>-100</goodwillImpact>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>VoidMonolith_ActivatedL0L1</castSound>
+	<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>7</level>
+        <order>3</order>
+        <psyfocusCost>0.75</psyfocusCost>
+        <entropyGain>75</entropyGain>
+<prerequisites>
+<li>VPE_Oripath-Y-InfectSafe</li>
+<li>VPE_MDOriginitemanifestSTNL</li>
+</prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>OriginiumArmorFormSTNL</hediff>
+      </li>
+	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+  
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_OriPsyFormSTNL</defName>
+    <label>Originium Psy-form</label>
+    <description>Manifest Originium catalysts, doubling your psychic sensitivity and halving the heat drain of psycasts. Additionally allows you to refill psyfocus faster when meditating.</description>
+    <iconPath>UI_Oripath-Y/Abilities/TogglePsy</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>1</castTime>
+	<castSound>VoidMonolith_ActivatedL2L3</castSound>
+	<needsTicking>true</needsTicking>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+				<path>VPE_Oripath-Y</path>
+				<level>7</level>
+				<order>1</order>
+				<psyfocusCost>0.25</psyfocusCost>
+				<entropyGain>200</entropyGain>
+				<prerequisites>
+<li>VPE_Oripath-Y-InfectSafe</li>
+<li>VPE_MDOriginitemanifestSTNL</li>
+</prerequisites>
+			</li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>OriginiumEnhancementFormSTNL</hediff>
+      </li>
+	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+<VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>VPE_Oripath-Annihilate</defName>
+    <label>Originium Annihilation</label>
+    <description>Attack the target with an absurd amount of Originium, causing the target to instantly die.</description>
+    <iconPath>UI_Oripath-Y/Abilities/Annihilate</iconPath>
+    <castTime>550</castTime>
+    <durationTime>12000</durationTime>
+    <targetMode>Pawn</targetMode>
+	<chance>0</chance>
+    <range>9.5</range>
+	<needsTicking>true</needsTicking>
+    <goodwillImpact>-100</goodwillImpact>
+<abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>VoidMonolith_ActivatedL0L1</castSound>
+    <fleckOnTarget>PsychicRitual_Complete</fleckOnTarget>
+	<targetingParameters>
+			<canTargetLocations>False</canTargetLocations>
+			<canTargetSelf>True</canTargetSelf>
+			<canTargetAnimals>True</canTargetAnimals>
+			<canTargetPawns>True</canTargetPawns>
+			<canTargetHumans>True</canTargetHumans>
+			<canTargetMechs>True</canTargetMechs>
+		</targetingParameters>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>VPE_Oripath-Y</path>
+        <level>8</level>
+        <order>1</order>
+        <psyfocusCost>0.75</psyfocusCost>
+        <entropyGain>75</entropyGain>
+		<prerequisites>
+<li>VPE_OripathyLimitBreakSTNL</li>
+<li>OriginiumArmorSTNL</li>
+<li>VPE_OriPsyFormSTNL</li>
+</prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>OriginiumAssimilatedSTNL</hediff>
+      </li>
+	  <li Class="VFECore.Abilities.AbilityExtension_EffecterOnTarget">
+<effecterDef>AgonyPulseExplosion</effecterDef>
+<maintainForTicks>30</maintainForTicks>
+<scale>2</scale>
+</li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+</Defs>

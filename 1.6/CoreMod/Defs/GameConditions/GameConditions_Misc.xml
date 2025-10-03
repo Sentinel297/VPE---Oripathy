@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <GameConditionDef>
+    <defName>DeathPallSTNL</defName>
+    <conditionClass>GameCondition_DeathPall</conditionClass>
+    <label>Originium Resurrection-Cloud</label>
+    <description>A cloud of Originium dust is resurrecting the dead, any corpse not under a roof will turn into a shambler.</description>
+    <letterText>A phenomenon similar to Death palls is forming.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <weatherDef>UnnaturalFog</weatherDef>
+    <canBePermanent>true</canBePermanent>
+    <natural>false</natural>
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef>
+
+
+  <GameConditionDef>
+    <defName>DarkWorldSTNL</defName>
+    <conditionClass>GameCondition_UnnaturalDarkness</conditionClass>
+    <label>Sun-blocking Originium Dust</label>
+    <description>A huge cloud of Originium particles is blocking out the sunlight.</description>
+    <letterText>The sky is becoming darker.</letterText>
+    <weatherDef>UnnaturalDarkness_Stage1</weatherDef>
+    <preventNeutralVisitors>true</preventNeutralVisitors>
+    <preventIncidents>true</preventIncidents>
+    <canBePermanent>true</canBePermanent>
+    <displayOnUI>true</displayOnUI> <!--  Displayed by weather instead -->
+    <natural>false</natural>
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef>
+
+</Defs>

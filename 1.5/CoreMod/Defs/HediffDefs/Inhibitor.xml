@@ -1,0 +1,324 @@
+<Defs>
+
+<ThingDef ParentName="MechSerumBase">
+    <defName>OripathyInhibitorSTNL</defName>
+    <label>Orig-inhibitor</label>
+    <description>A dose of overcharged originite mixed with luciferium mechanites, specially created to reset the infection back to its starting point, enough to grant another 90 days of survival to the infected.</description>
+    <descriptionHyperlinks>
+<HediffDef>oripathySTNL</HediffDef>
+</descriptionHyperlinks>
+	<graphicData>
+      <texPath>UI_Oripath-Y/Abilities/Regresser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>1300</MarketValue>
+    </statBases>
+	<costList>
+<Luciferium>1</Luciferium>
+<oc_originite_crystalSTNL>1</oc_originite_crystalSTNL>
+</costList>
+<recipeMaker>
+<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+<workSkill>Intellectual</workSkill>
+<recipeUsers>
+<li>DrugLab</li>
+</recipeUsers>
+<researchPrerequisite>MedicineProduction</researchPrerequisite>
+<skillRequirements>
+<Crafting>4</Crafting>
+<Intellectual>4</Intellectual>
+</skillRequirements>
+<bulkRecipeCount>4</bulkRecipeCount>
+<displayPriority>2000</displayPriority>
+</recipeMaker>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+     <li Class="CompProperties_UseEffectAddHediffSTNL">
+        <hediffDef>oripathySTNL</hediffDef>
+        <allowRepeatedUse>true</allowRepeatedUse>
+		<replaceExisting>true</replaceExisting>
+		<severity>0.01</severity>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <RecipeDef Name="InhibitionSurgerySTNL" ParentName="SurgeryFlesh" Abstract="True">
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+	</RecipeDef>
+
+  <RecipeDef ParentName="InhibitionSurgerySTNL">
+    <defName>InjectOripathyInhibitorSTNL</defName>
+    <label>administer Orig-Inhibitor</label>
+    <description>Administer an Orig-Inhibitor.</description>
+    <workerClass>VPEORIPATHY.Recipe_UseItemOnSTNL</workerClass>
+    <jobString>Administering Orig-Inhibitor.</jobString>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+    <workAmount>600</workAmount>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+    <surgeryOutcomeEffect IsNull="True"/>
+    <humanlikeOnly>false</humanlikeOnly>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OripathyInhibitorSTNL</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OripathyInhibitorSTNL</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  
+    <RecipeDef ParentName="InhibitionSurgerySTNL">
+    <defName>InjectOripathyFailedInhibitorSTNL</defName>
+    <label>administer Experimental Inhibitor</label>
+    <description>Administer an Experimental Inhibitor.</description>
+    <workerClass>VPEORIPATHY.Recipe_UseItemOnSTNL</workerClass>
+    <jobString>Administering Experimental Inhibitor.</jobString>
+    <targetsBodyPart>false</targetsBodyPart>
+    <anesthetize>false</anesthetize>
+    <workAmount>600</workAmount>
+    <dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+    <surgeryOutcomeEffect IsNull="True"/>
+    <humanlikeOnly>false</humanlikeOnly>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>OripathyFailedInhibitorSTNL</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OripathyFailedInhibitorSTNL</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+   
+    <HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+      <defName>OripathyregressionpossibleSTNL</defName>
+      <label>Oripathy inhibitor injected</label>
+      <description>This person possesses the ability to reverse their condition enough to give themselves another 90 days.</description>
+      <descriptionShort>This person possesses the ability to reverse their condition enough to give themselves another 90 days.</descriptionShort>
+      <isBad>false</isBad>
+	  <abilities>
+      <li>RegressOripathySTNL</li>
+    </abilities>
+	  <stages>
+	  <li> </li>
+      </stages>
+	  <comps>
+	  <li Class="HediffCompProperties_Effecter">
+<stateEffecter>BiomutationLanceWarmup</stateEffecter>
+</li>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+          5000
+          </disappearsAfterTicks>
+		  <showRemainingTime>True</showRemainingTime>
+        </li>
+      </comps>
+    </HediffDef>
+	
+	<AbilityDef>
+    <defName>RegressOripathySTNL</defName>
+    <label>Regress Infection</label>
+    <description>Wield the Arts from your infection along the help of the inhibitor to regress your condition back to its starting point.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+	 <cooldownTicksRange>60000</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <iconPath>UI_Oripath-Y/Abilities/Regress</iconPath>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <warmupStartSound>DeadlifeRelease</warmupStartSound>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>1000</Ability_Duration>
+      <Ability_EffectRadius>9.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>-1</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>oripathySTNL</hediffDef>
+        <replaceExisting>true</replaceExisting>
+		<severity>0.01</severity>
+      </li>
+    </comps>
+  </AbilityDef>
+  
+  
+   <HediffDef>
+	<hediffClass>HediffWithComps</hediffClass>
+	<defaultLabelColor>(1.0, 0, 0)</defaultLabelColor>
+      <defName>OripathyFailingRegressionSTNL</defName>
+      <label>Experimental Oripathy inhibitor injected</label>
+      <description>This person possesses the ability to reverse their condition enough to give themselves another 22 days.</description>
+      <descriptionShort>This person possesses the ability to reverse their condition enough to give themselves another 22 days.</descriptionShort>
+      <isBad>false</isBad>
+	  <abilities>
+      <li>FailRegressOripathySTNL</li>
+    </abilities>
+	  <stages>
+	  <li> </li>
+      </stages>
+	  <comps>
+	  <li Class="HediffCompProperties_Effecter">
+<stateEffecter>BiomutationLanceWarmup</stateEffecter>
+</li>
+        <li Class="HediffCompProperties_Disappears">
+          <disappearsAfterTicks>
+          5000
+          </disappearsAfterTicks>
+		  <showRemainingTime>True</showRemainingTime>
+        </li>
+      </comps>
+    </HediffDef>
+	
+	<AbilityDef>
+    <defName>FailRegressOripathySTNL</defName>
+    <label>Experimental Oripathy Regression</label>
+    <description>Use your Arts to barely affect your condition, enough to lower it to 75% as a temporary solution until you find a better one.</description>
+    <jobDef>CastAbilityOnThing</jobDef>
+	 <cooldownTicksRange>60000</cooldownTicksRange>
+    <targetRequired>False</targetRequired>
+    <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
+    <iconPath>UI_Oripath-Y/Abilities/RegressFail</iconPath>
+    <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <showPsycastEffects>False</showPsycastEffects>
+    <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <uiOrder>1</uiOrder>
+    <warmupStartSound>DeadlifeRelease</warmupStartSound>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <statBases>
+      <Ability_Duration>1000</Ability_Duration>
+      <Ability_EffectRadius>9.9</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0.5</warmupTime>
+      <range>-1</range>
+      <drawAimPie>False</drawAimPie>
+      <requireLineOfSight>False</requireLineOfSight>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetAnimals>false</canTargetAnimals>
+        <canTargetHumans>false</canTargetHumans>
+        <canTargetMechs>false</canTargetMechs>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>oripathySTNL</hediffDef>
+        <replaceExisting>true</replaceExisting>
+		<severity>0.75</severity>
+      </li>
+    </comps>
+  </AbilityDef>
+  
+  <ThingDef ParentName="MechSerumBase">
+    <defName>OripathyFailedInhibitorSTNL</defName>
+    <label>Experimental Inhibitor</label>
+    <description>A dose of unstable originium obtained through a questionable mix of Originite crystals. Allows the user to revert their condition to 75% of the infection but will also raise their infection level to 75% if used before that point. Using this will grant another 22 days of survival to the infected.</description>
+    <descriptionHyperlinks>
+<HediffDef>oripathySTNL</HediffDef>
+</descriptionHyperlinks>
+	<graphicData>
+      <texPath>UI_Oripath-Y/Abilities/FailedRegresser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <statBases>
+      <MarketValue>200</MarketValue>
+    </statBases>
+	<costList>
+<originite_crystalSTNL>2</originite_crystalSTNL>
+</costList>
+<recipeMaker>
+<workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+<workSkill>Intellectual</workSkill>
+<recipeUsers>
+<li>DrugLab</li>
+</recipeUsers>
+<researchPrerequisite>DrugProduction</researchPrerequisite>
+<skillRequirements>
+<Crafting>4</Crafting>
+<Intellectual>4</Intellectual>
+</skillRequirements>
+<bulkRecipeCount>4</bulkRecipeCount>
+<displayPriority>2000</displayPriority>
+</recipeMaker>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <tradeability>Buyable</tradeability>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Use {0_label}</useLabel>
+        <useDuration>60</useDuration>
+        <showUseGizmo>true</showUseGizmo>
+      </li>
+      <li Class="CompProperties_UseEffectPlaySound">
+        <soundOnUsed>MechSerumUsed</soundOnUsed>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+      <li Class="CompProperties_UseEffectAddHediffSTNL">
+        <hediffDef>oripathySTNL</hediffDef>
+        <allowRepeatedUse>true</allowRepeatedUse>
+		<replaceExisting>true</replaceExisting>
+		<severity>0.75</severity>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
