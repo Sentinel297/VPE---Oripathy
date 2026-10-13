@@ -1,0 +1,13 @@
+<LanguageData>
+<!-- Inhibitor Usage -->
+<VPE_OripathyUsedInhibitorMote_STNL>Used {0} from inventory, {1} remaining, Infection level: {2}%</VPE_OripathyUsedInhibitorMote_STNL>
+<!-- Settings -->
+<!-- Oripathy -->
+<VPE_Oripathy_Oripathy_STNL>Oripathy:</VPE_Oripathy_Oripathy_STNL>
+<VPE_Oripathy_DaysToKill_STNL>Oripathy will reach 100% in: {0} day(s)</VPE_Oripathy_DaysToKill_STNL>
+<VPE_Oripathy_OripathySeekMedicine_Threshold_STNL>Pawns will seek inhibitors after their infection reaches: {0}%</VPE_Oripathy_OripathySeekMedicine_Threshold_STNL>
+<!-- Oripathic Storm -->
+<VPE_Oripathy_OripathicStorm_STNL>Oripathic Storm:</VPE_Oripathy_OripathicStorm_STNL>
+<VPE_Oripathy_OripathicStorm_InfectionSafetyThreshold_STNL>Toxic environment resistance required to be immune to this condition: {0}%</VPE_Oripathy_OripathicStorm_InfectionSafetyThreshold_STNL>
+<VPE_Oripathy_OripathicStorm_InfectionGain_STNL>Infection progression per tick (Every 3 sec): {0}% (Scales inversely with toxic environment resistance)</VPE_Oripathy_OripathicStorm_InfectionGain_STNL>
+</LanguageData>

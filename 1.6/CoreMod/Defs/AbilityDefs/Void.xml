@@ -199,7 +199,7 @@
     <defName>VPE_DarknessSTNL</defName>
     <label>World Of Dark: Resurrecting-Oripathy</label>
     <description>Unleash a huge cloud of Originium dust high in the sky, causing it to resurrect dead creatures back to life in a berserk state.</description>
-    <iconPath>UI_Oripath-Y/Abilities/OripathyRevive</iconPath>
+    <iconPath>UI_Oripath-Y/Abilities/OripathicStorm</iconPath>
     <abilityClass>VEF.Abilities.Ability_Blank</abilityClass>
     <castTime>600</castTime>
     <targetMode>Self</targetMode>

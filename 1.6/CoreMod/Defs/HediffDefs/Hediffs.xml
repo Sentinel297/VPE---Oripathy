@@ -1,20 +1,4 @@
 <Defs>
-<ChemicalDef>
-    <defName>OriginiumCrystalSTNL</defName>
-    <label>Originium Crystal</label>
-    <canBinge>false</canBinge>
-	<addictionHediff>oripathySTNL</addictionHediff>
-    <generateAddictionGenes>false</generateAddictionGenes>
-  </ChemicalDef>
-  
-  <ChemicalDef>
-    <defName>OriginiumCrystalSafeSTNL</defName>
-    <label>Originium Crystal</label>
-    <canBinge>false</canBinge>
-	<addictionHediff>oripathySafeSTNL</addictionHediff>
-    <generateAddictionGenes>false</generateAddictionGenes>
-  </ChemicalDef>
-  
 <ThingDef ParentName="DrugPillBase">
 <defName>originite_crystalSTNL</defName>
 <label>Originite</label>
@@ -56,7 +40,7 @@
 </ingestible>
 <comps>
 <li Class="CompProperties_Drug">
-<chemical>OriginiumCrystalSTNL</chemical>
+<chemical>Luciferium</chemical>
 <addictiveness>0</addictiveness>
 <needLevelOffset>0</needLevelOffset>
 <listOrder>1020</listOrder>
@@ -112,7 +96,7 @@
 </ingestible>
 <comps>
 <li Class="CompProperties_Drug">
-<chemical>OriginiumCrystalSTNL</chemical>
+<chemical>Luciferium</chemical>
 <addictiveness>0</addictiveness>
 <needLevelOffset>0</needLevelOffset>
 <listOrder>1020</listOrder>
@@ -168,7 +152,7 @@
 </ingestible>
 <comps>
 <li Class="CompProperties_Drug">
-<chemical>OriginiumCrystalSafeSTNL</chemical>
+<chemical>Luciferium</chemical>
 <addictiveness>0</addictiveness>
 <needLevelOffset>0</needLevelOffset>
 <listOrder>1020</listOrder>
@@ -1176,28 +1160,6 @@
             <texPaths>
                <li>Pawn/PsychicForm/Enhancement</li>
             </texPaths>
-						<drawData>
-				<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-				<defaultData>
-					<layer>0</layer>
-				</defaultData>
-				<dataNorth>
-					<offset>(0, 0, 0)</offset>
-					<layer>1000</layer>
-				</dataNorth>
-				<dataSouth>
-					<offset>(0, 0, 0)</offset>
-					<layer>-100</layer>
-				</dataSouth>
-				<dataEast>
-					<offset>(0, 0,0.05)</offset>
-					<layer>0</layer>
-				</dataEast>
-				<dataWest>
-					<offset>(0, 0,0.05)</offset>
-					<layer>0</layer>
-				</dataWest>
-			</drawData>
             <baseLayer>0</baseLayer>
             <texSeed>1</texSeed>
          </li>

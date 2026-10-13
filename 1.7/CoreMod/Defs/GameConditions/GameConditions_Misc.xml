@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Kept in game to avoid bad things happening on update -->
+
+  <GameConditionDef>
+    <defName>DeathPallSTNL</defName>
+    <conditionClass>GameCondition_DeathPall</conditionClass>
+    <label>Originium resurrection-cloud</label>
+    <description>A cloud of Originium dust is resurrecting the dead, any corpse not under a roof will turn into a shambler.</description>
+    <letterText>A phenomenon similar to Death palls is forming.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <weatherDef>UnnaturalFog</weatherDef>
+    <canBePermanent>true</canBePermanent>
+    <natural>false</natural>
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef>
+
+
+  <GameConditionDef>
+    <defName>DarkWorldSTNL</defName>
+    <conditionClass>GameCondition_UnnaturalDarkness</conditionClass>
+    <label>Sun-blocking Originium Dust</label>
+    <description>A huge cloud of Originium particles is blocking out the sunlight.</description>
+    <letterText>The sky is becoming darker.</letterText>
+    <weatherDef>UnnaturalDarkness_Stage1</weatherDef>
+    <preventNeutralVisitors>true</preventNeutralVisitors>
+    <preventIncidents>true</preventIncidents>
+    <canBePermanent>true</canBePermanent>
+    <displayOnUI>true</displayOnUI> <!--  Displayed by weather instead -->
+    <natural>false</natural>
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef>
+  
+  <!-- New -->
+
+  <GameConditionDef>
+    <defName>VPE_Oripathy_OripathicStorm_STNL</defName>
+    <conditionClass>VPE_Oripathy.Oripathic_Storm</conditionClass>
+    <label>Oripathic dust cloud</label>
+    <description>A large cloud of Originium dust is covering the area, anyone exposed to it will quickly become infected with Oripathy.</description>
+    <letterText>A phenomenon similar to Death palls is forming.</letterText>
+    <letterDef>NegativeEvent</letterDef>
+    <weatherDef>VPE_Oripathic_Dust_Cloud_STNL</weatherDef>
+	<displayOnUI>true</displayOnUI>
+    <canBePermanent>true</canBePermanent>
+    <natural>false</natural>
+    <allowUnderground>false</allowUnderground>
+  </GameConditionDef>
+  
+    <WeatherDef>
+    <defName>VPE_Oripathic_Dust_Cloud_STNL</defName>
+    <label>Oripathic dust cloud</label>
+    <isBad>true</isBad>
+    <canOccurAsRandomForcedEvent>false</canOccurAsRandomForcedEvent>
+    <description>A large cloud of Originium dust is covering the area, anyone exposed to it will quickly become infected with Oripathy.</description>
+    <favorability>VeryBad</favorability>
+    <perceivePriority>3</perceivePriority>
+    <windSpeedFactor>0.5</windSpeedFactor>
+    <accuracyMultiplier>0.8</accuracyMultiplier>
+    <transitionTicksOverride>600</transitionTicksOverride>
+    <!-- <weatherThought>DeathPall</weatherThought> -->
+    <ambientSounds>
+      <li>Ambient_DeathPall</li>
+    </ambientSounds>
+    <overlayClasses>
+      <!-- <li>WeatherOverlay_DeathpallFog</li> -->
+      <li>WeatherOverlay_DeathpallAshes</li>
+    </overlayClasses>
+    <commonalityRainfallFactor>
+      <points>
+        <li>(0, 0)</li>
+        <li>(1300, 1)</li>
+      </points>
+    </commonalityRainfallFactor>
+    <!-- Colors are Overcast -->
+    <skyColorsDay>
+      <sky>(0.482,0.603,0.682)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.25,0.2,0.2)</overlay>
+      <saturation>0.5</saturation>
+    </skyColorsDay>
+    <skyColorsDusk>
+      <sky>(0.482,0.603,0.682)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.25,0.2,0.2)</overlay>
+      <saturation>0.5</saturation>
+    </skyColorsDusk>
+    <skyColorsNightEdge>
+      <sky>(0.35,0.40,0.45)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.15,0.1,0.1)</overlay>
+      <saturation>0.5</saturation>
+    </skyColorsNightEdge>
+    <skyColorsNightMid>
+      <sky>(0.35,0.40,0.45)</sky>
+      <shadow>(0.92,0.92,0.92)</shadow>
+      <overlay>(0.15,0.1,0.1)</overlay>
+      <saturation>0.5</saturation>
+    </skyColorsNightMid>
+  </WeatherDef>
+</Defs>
